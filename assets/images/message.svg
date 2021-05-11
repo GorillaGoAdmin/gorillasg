@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="103" height="103" viewBox="0 0 103 103">
+  <defs>
+    <filter id="Ellipse_552" x="0" y="0" width="103" height="103" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-color="#dbdbdb"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_41537" data-name="Group 41537" transform="translate(-794.5 -2826.5)">
+    <g transform="matrix(1, 0, 0, 1, 794.5, 2826.5)" filter="url(#Ellipse_552)">
+      <circle id="Ellipse_552-2" data-name="Ellipse 552" cx="47" cy="47" r="47" transform="translate(1.5 1.5)" fill="#fff"/>
+    </g>
+    <path id="Icon_material-message" data-name="Icon material-message" d="M32.1,3H6.234A3.229,3.229,0,0,0,3.016,6.234L3,35.335l6.467-6.467H32.1a3.243,3.243,0,0,0,3.234-3.234V6.234A3.243,3.243,0,0,0,32.1,3ZM28.868,22.4H9.467V19.168h19.4Zm0-4.85H9.467V14.317h19.4Zm0-4.85H9.467V9.467h19.4Z" transform="translate(824.23 2857.833)" fill="#ffd007"/>
+  </g>
+</svg>
