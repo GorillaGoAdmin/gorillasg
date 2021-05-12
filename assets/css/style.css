@@ -47,6 +47,14 @@ a.nav-link {
 	transition: all .4s ease-in-out;
 }
 
+a.btn-download img {
+	transition: all .4s ease-in-out;
+}
+
+a.btn-download:hover img {
+	transform: translateY(-2px);
+}
+
 .btn-primary {
 	background: #ffd100;
 	border: 0;
@@ -64,6 +72,10 @@ a.nav-link {
 	color: #000;
 	font-weight: bold;
 }
+.btn-white:hover {
+	background: #000;
+	color: #fff;
+}
 
 .btn-black {
 	background-color: #000;
@@ -71,15 +83,13 @@ a.nav-link {
 	font-weight: bold;
 }
 
-.btn-download {
-	background-color: #000;
-	color: #fff !important;
-	text-align: left;
-	display: inline-flex;
-	align-items: center;
+.btn-black:hover {
+	background-color: #fff;
+	color: #000;
+	border: 1px solid #000;
 }
 
-.app-btn a.nav-link {
+btn .app-btn a.nav-link {
 	padding: 14px 30px !important;
 	font-size: 1rem;
 }
@@ -120,13 +130,28 @@ nav.navbar {
 }
 
 .form-container {
-	margin: auto;
-	padding: 2rem;
+	margin-top: auto;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 2rem 3rem;
 	border-radius: 12px;
-	transform: translateY(-50%);
-	background: #fff;
-	margin-bottom: -120px !important;
-	box-shadow: 0 2px 48px black;
+	transform: translateY(-75%);
+	background: rgb(255, 255, 255);
+	box-shadow: black 0px 2px 30px;
+	margin-bottom: -180px !important;
+}
+
+.form-container > h5:before {
+	content: "";
+	background: url('../images/Path 53238@2x.png');
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 9%;
+	left: 3%;
 }
 
 .form-input {
@@ -134,11 +159,14 @@ nav.navbar {
 	border-bottom: 1px solid #eee;
 	padding: .625rem;
 	outline: 0;
+	transition: all .4s ease-in-out;
+	position: relative;
 }
+
 .form-input:focus-visible,
 .form-input:visited,
 .form-input:active {
-	border: 1px solid #eee;
+	border-bottom: 1px solid #ffd100;
 }
 
 #banner .row {
@@ -221,6 +249,18 @@ h3.card-title {
 }
 p.card-subtitle {
 	font-size: 1rem !important;
+}
+
+.double-headed-arrow {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1200px) {
+	.double-headed-arrow {
+		display: none;
+	}
 }
 
 /* The Tech Section */
@@ -531,20 +571,96 @@ footer a {
 		display: none;
 	}
 }
+@media screen and (max-width: 1024px) {
+	.banner-image {
+		display: none;
+	}
 
+	/* #banner {
+		height: 50vh;
+	} */
+
+	.waiting-list-banner .banner-subtitle {
+		width: 100% !important;
+		margin: 50px auto;
+	}
+	.banner-btns {
+		justify-content: center;
+	}
+	.banner-content {
+		margin-top: 3rem;
+		text-align: center;
+	}
+
+	.banner-info {
+		width: 100% !important;
+	}
+
+	#banner .col-md-7 {
+		flex: 1;
+		max-width: 100%;
+	}
+	#banner .col-md-5 {
+		display: none;
+	}
+
+	.form-container {
+		transform: translateY(-100%);
+		margin-bottom: -400px !important;
+	}
+	.form-container form > .row .col-md-6:nth-of-type(n) {
+		text-align: left !important;
+	}
+}
 @media (max-width: 767px) {
 	.container {
 		padding-left: 25px;
 		padding-right: 25px;
 	}
-	.desktop-heading {
+
+	.banner-content {
+		margin-top: 0;
+	}
+
+	.banner-image {
 		display: none;
+	}
+	.banner-info {
+		width: 100% !important;
+	}
+	#banner {
+		height: 100vh;
+	}
+	.banner-btns {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.download-btns {
+		margin-top: 1rem;
 	}
 	section#telecommunication h3,
 	#the_tech h3,
-	#next_gen h3 {
+	#next_gen h3,
+	#power_to_generate h3,
+	#download-app-section h3 {
 		font-size: 1.625rem;
+		width: 100% !important;
 	}
+
+	#the_tech .container .row {
+		padding: 1rem;
+	}
+
+	#the_tech .container .row:nth-of-type(1) {
+		flex-direction: column-reverse;
+	}
+
+	ul.list {
+		padding-left: 0;
+	}
+
 	#the_tech h3 {
 		text-align: center;
 	}
@@ -738,7 +854,7 @@ footer a {
 	padding: 3px;
 }
 .social-icons {
-	margin-top: 20px;
+	transform: translateY(-10px);
 	flex-wrap: nowrap;
 	display: flex;
 	justify-content: flex-end;
